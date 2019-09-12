@@ -2,18 +2,16 @@
 
 public static class ResistorColor
 {
+    static string[] RColors { get; } = new[] { "black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white" };
+
     public static int ColorCode(string color)
     {
-        //var colors = Colors();
-        return Array.FindIndex(Colors(), (x) => x.Equals(color));
-
+        return Array.FindIndex(Colors(), (x) => x == color);
 
     }
 
     public static string[] Colors()
     {
-        //var colors = new[] { "black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white" };
-        //return colors;
-        return new[] { "black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white" };
+        return RColors;
     }
 }
